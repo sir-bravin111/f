@@ -1,0 +1,20 @@
+{
+  "name": "sir-bravin-session-gen",
+  "version": "1.0.0",
+  "description": "Session generator for Sir Bravin WhatsApp bot using Baileys pairing code",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": ["whatsapp", "session", "generator", "baileys", "pairing-code"],
+  "author": "Sir Bravin",
+  "license": "MIT",
+  "dependencies": {
+    "@whiskeysockets/baileys": "^6.7.0",
+    "@hapi/boom": "^10.0.1",
+    "express": "^4.18.2",
+    "pino": "^8.15.0",
+    "fs-extra": "^11.1.1"
+  }
+}
