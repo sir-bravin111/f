@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>👑 Sir Bravin Session Generator</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <div class="container">
+    <div class="card">
+      <div class="header">
+        <div class="icon">👑</div>
+        <h1>Sir Bravin</h1>
+        <p class="subtitle">WhatsApp Bot Session Generator</p>
+      </div>
+
+      <div class="warning">
+        <i class="fas fa-exclamation-triangle"></i>
+        <span>Do not share your session ID with anyone!</span>
+      </div>
+
+      <!-- Step 1: Phone number -->
+      <div id="step-phone" class="step active">
+        <label>Enter your WhatsApp number</label>
+        <p class="hint">Include country code, no <code>+</code> or spaces. Example: <code>254712345678</code></p>
+        <input type="tel" id="phoneInput" placeholder="254712345678" />
+        <button id="pairBtn" class="btn-primary">
+          <i class="fas fa-key"></i> Get Pairing Code
+        </button>
+      </div>
+
+      <!-- Step 2: Pairing code -->
+      <div id="step-code" class="step">
+        <label>Your Pairing Code</label>
+        <p class="hint">Open WhatsApp → Linked Devices → Link with phone number, then enter this code:</p>
+        <div class="code-box" id="pairingCode">----</div>
+        <p class="hint waiting"><i class="fas fa-spinner fa-spin"></i> Waiting for you to link the device…</p>
+        <button id="checkBtn" class="btn-primary">
+          <i class="fas fa-sync"></i> I've linked it — Check Status
+        </button>
+      </div>
+
+      <!-- Step 3: Session ID -->
+      <div id="step-session" class="step">
+        <label>Your SESSION_ID</label>
+        <p class="hint">Copy this and paste it into your bot's environment variables.</p>
+        <textarea id="sessionOutput" readonly></textarea>
+        <button id="copyBtn" class="btn-primary">
+          <i class="fas fa-copy"></i> Copy SESSION_ID
+        </button>
+        <button id="resetBtn" class="btn-secondary">
+          <i class="fas fa-redo"></i> Generate Another
+        </button>
+      </div>
+
+      <div class="error" id="errorBox"></div>
+    </div>
+
+    <div class="footer">
+      <i class="fas fa-heart" style="color:#ec4899;"></i>
+      Made by <strong>Sir Bravin</strong> · <span id="year"></span>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
